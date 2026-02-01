@@ -1,4 +1,8 @@
-// ----- Falling Hearts -----
+function handleYesClick() {
+  window.location.href = "yes_page.html";
+}
+
+// Hearts
 function createHeart() {
   const heart = document.createElement("div");
   heart.classList.add("heart");
@@ -8,14 +12,13 @@ function createHeart() {
   heart.style.animationDuration = Math.random() * 2 + 3 + "s";
 
   document.body.appendChild(heart);
-
   setTimeout(() => heart.remove(), 5000);
 }
 
 setInterval(createHeart, 300);
 
 
-// ----- No Button Logic -----
+// No button
 let messageIndex = 0;
 
 const messages = [
@@ -41,20 +44,15 @@ function handleNoClick() {
   yesButton.style.fontSize = (currentSize * 1.4) + "px";
 }
 
-
-// ----- Run Away Effect -----
+// Safer run away
 function runAway() {
   const btn = document.querySelector('.no-button');
 
-  const x = Math.random() * 200 - 100;
-  const y = Math.random() * 200 - 100;
+  const maxX = window.innerWidth / 3;
+  const maxY = window.innerHeight / 3;
+
+  const x = Math.random() * maxX - maxX/2;
+  const y = Math.random() * maxY - maxY/2;
 
   btn.style.transform = `translate(${x}px, ${y}px)`;
 }
-
-
-// ----- Yes Click -----
-function handleYesClick() {
-  window.location.href = "yes_page.html";
-}
-

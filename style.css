@@ -4,11 +4,9 @@ body {
   text-align: center;
   color: #ff4d6d;
 
-  overflow-x: hidden;   /* only block left-right scroll */
-  overflow-y: auto;     /* allow vertical scroll */
+  overflow-x: hidden;
   min-height: 100vh;
 }
-
 
 .green {
   color: #8bc34a;
@@ -28,14 +26,17 @@ body {
   }
 }
 
-/* Card */
+/* CARD */
 .container {
   background: white;
-  width: 360px;
-  margin: 50px auto;
-  padding: 22px;
-  border-radius: 20px;
 
+  width: 92%;          /* RESPONSIVE WIDTH */
+  max-width: 420px;    /* laptop limit */
+
+  margin: 30px auto;
+  padding: 18px;
+
+  border-radius: 20px;
   box-shadow: 0 10px 25px rgba(255, 77, 109, 0.2);
   border: 2px dashed #ffb3c1;
 
@@ -46,24 +47,23 @@ body {
   transform: scale(1.02);
 }
 
-/* GIF styling */
+/* GIF */
 img {
   border-radius: 15px;
   margin: 10px;
   transition: 0.3s;
+
+  width: 180px;     /* default */
 }
 
-img:hover {
-  transform: scale(1.05);
-}
-
+/* TEXT */
 .question {
   color: #e91e63;
   font-size: 18px;
   margin: 10px;
 }
 
-/* Buttons */
+/* BUTTONS */
 .btn {
   padding: 10px 20px;
   font-size: 18px;
@@ -92,15 +92,38 @@ img:hover {
   color: #ff4d6d;
   border: 1px solid #ffb3c1;
   position: relative;
+
+  max-width: 220px;
+  white-space: normal;
 }
 
-/* Mobile */
-@media (max-width: 500px) {
-  .container {
-    width: 90%;
+/* ======= MOBILE MAGIC ======= */
+
+@media (max-width: 600px) {
+
+  h1 {
+    font-size: 26px;
+  }
+
+  .question {
+    font-size: 20px;
+  }
+
+  img {
+    width: 220px;       /* BIGGER GIF ON PHONE */
   }
 
   .btn {
-    font-size: 16px;
+    font-size: 20px;
+    padding: 12px 24px;
+
+    width: 85%;         /* big tap area */
+    display: block;
+    margin: 12px auto;
+  }
+
+  .container {
+    margin-top: 20px;
+    padding: 22px 12px;
   }
 }

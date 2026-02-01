@@ -3,7 +3,9 @@
 <head>
   <title>Be My Valentine</title>
 
-  <!-- Link CSS -->
+  <!-- IMPORTANT for mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,23 +15,18 @@
 
 <div class="container">
 
-  <!-- Cute GIF -->
-  
-  
-   <img src="https://media1.tenor.com/m/SbFFdgrdIXIAAAAC/mochi-happy.gif" width="160">
-
+  <img src="https://media1.tenor.com/m/SbFFdgrdIXIAAAAC/mochi-happy.gif" width="160">
 
   <p class="question">Will you be my Valentine?</p>
 
   <button class="btn yes-button" onclick="handleYesClick()">Yes</button>
+
   <button class="btn no-button"
           onmouseover="runAway()"
           onclick="handleNoClick()">No</button>
 
 </div>
 
-<!-- Link JS -->
 <script src="script.js"></script>
-
 </body>
 </html>
