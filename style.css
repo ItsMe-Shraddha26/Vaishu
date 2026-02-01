@@ -1,0 +1,106 @@
+body {
+  background: #fff0f5;
+  font-family: Arial;
+  text-align: center;
+  color: #ff4d6d;
+
+  overflow-x: hidden;   /* only block left-right scroll */
+  overflow-y: auto;     /* allow vertical scroll */
+  min-height: 100vh;
+}
+
+
+.green {
+  color: #8bc34a;
+}
+
+/* Falling hearts */
+.heart {
+  position: fixed;
+  top: -10px;
+  animation: fall linear infinite;
+  font-size: 20px;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+  }
+}
+
+/* Card */
+.container {
+  background: white;
+  width: 360px;
+  margin: 50px auto;
+  padding: 22px;
+  border-radius: 20px;
+
+  box-shadow: 0 10px 25px rgba(255, 77, 109, 0.2);
+  border: 2px dashed #ffb3c1;
+
+  transition: transform 0.3s;
+}
+
+.container:hover {
+  transform: scale(1.02);
+}
+
+/* GIF styling */
+img {
+  border-radius: 15px;
+  margin: 10px;
+  transition: 0.3s;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+.question {
+  color: #e91e63;
+  font-size: 18px;
+  margin: 10px;
+}
+
+/* Buttons */
+.btn {
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  margin: 10px;
+  border-radius: 12px;
+}
+
+/* YES */
+.yes-button {
+  background: linear-gradient(45deg, #ff4d6d, #ff758f);
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(255, 77, 109, 0.3);
+  transition: 0.3s;
+}
+
+.yes-button:hover {
+  transform: scale(1.1);
+}
+
+/* NO */
+.no-button {
+  background: #ffe3e8;
+  color: #ff4d6d;
+  border: 1px solid #ffb3c1;
+  position: relative;
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+  .container {
+    width: 90%;
+  }
+
+  .btn {
+    font-size: 16px;
+  }
+}
